@@ -52,7 +52,7 @@ const startGame = () => {
     // Добавляем сердечки
     for (let i = 0; i < state["health"]; i++) {
     const heart = document.createElement("img")
-    heart.setAttribute("src", "/heart.svg")  
+    heart.setAttribute("src", "./heart.svg")  
     heart.setAttribute("alt", "heart")
     heart.classList.add("heart")
 
