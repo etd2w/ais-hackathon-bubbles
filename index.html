@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хакатон</title>
+</head>
+<body>
+    <header>
+        <button class="menu-button"><div class="menu-lines"></div></button>
+        <a href="#">
+            <img src="logo.svg" alt="logo" />
+        </a>
+        <div class="user">
+            <img src="user-face.svg" alt="user-icon">
+            <span class="user-name">Шайлушай</span>
+        </div>
+    </header>
+
+    <main>
+        <h1>Арифметические пузырики</h1>
+        <!-- Окно настроек -->
+        <div class="settings">
+            <!-- Первый столбик -->
+            <div class="filters">
+                <div class="filters-first">
+                    <div class="filters-title">Операции</div>
+                    <div class="filters-title-value">
+                        <input type="checkbox" id="add" name="add" value="+" class="operation" checked>
+                        <label for="add"> Сложение</label><br>
+    
+                        <input type="checkbox" id="sub" name="sub" value="-" class="operation">
+                        <label for="sub"> Вычетание</label><br>
+    
+                        <input type="checkbox" id="mult" name="mult" value="*" class="operation">
+                        <label for="mult"> Умножение</label><br>
+                    </div>
+                </div>
+                
+                <div class="filters-second">
+                    <div class="filters-title">Кол-во операций</div>
+                    <div class="max-selector">
+                        <button class="sb inputBtn">-</button>
+                        <input type="text" value="1" maxlength="1" class="edit"/>
+                        <button class="sb1 inputBtn">+</button>    
+                    </div>
+                </div>
+
+                <button disabled class="start1 inv">Старт</button>
+            </div>
+
+            <!-- Второй столбик -->
+            <div class="filters">
+                <div class="filters-first">
+                    <div class="filters-title">Макс. число</div>
+                    <div class="filters-title-value">
+                        <input type="radio" id="10" name="maxvalue" value="10" class="operation1" checked>
+                        <label for="10">10</label><br>
+    
+                        <input type="radio" id="50" name="maxvalue" value="50" class="operation1">
+                        <label for="50">50</label><br>
+    
+                        <input type="radio" id="100" name="maxvalue" value="100" class="operation1">
+                        <label for="100">100</label><br>
+                    </div>
+                </div>
+                
+                <div class="filters-second">
+                    <div class="filters-title">Кол-во сердечек</div>
+                    <div class="max-selector">
+                        <button class="sb2 inputBtn">-</button>
+                        <input type="text" value="3" maxlength="1" class="edit healthInput"/>
+                        <button class="sb3 inputBtn">+</button>    
+                    </div>
+                </div>
+
+                <button class="start">Старт</button>
+            </div>
+
+            <!-- Трейтий столбик -->
+            <div>
+                <div class="filters-title">Инструкция</div> 
+                <div class="filters-title2"><p><font color="red">Арифметические пузырики</font> - это игра, которая помогает улучшить навыки в арифметике, особенно в сложении и вычитании. В этой игре игроку предлагается решить ряд арифметических задач, а затем правильно упорядочить их по возрастанию или убыванию.</p>
+                <p><font color="red">-</font> При выборе одного или нескольких галочек в "операциях", в игру будут добавляться арифметические операции на ваш выбор.</p>
+                <p><font color="red">-</font> При выборе числа в "количестве операций", в игру будут добавляться примеры, количество операций которых соответствуюет выбранному числу.</p></div>
+            </div>
+        </div>
+        
+        <!-- Окно игры -->
+        <div class="game-container hide">
+            <div class="stats">
+                <div class="health">
+                </div>
+                <div class="result">Результат: <span class="score">0</span></div>
+            </div>
+            <div class="game-field"></div>
+            <input type="text" class="input-bar">
+        </div>
+        
+        <!-- Окно конца -->
+        <div class="score-container hide">
+            <div class="title">Новый результат: <span class="newScore">0</span></div>
+            <hr>
+            <div class="title">Ваш рекорд: <span class="bestScore">0</span></div>
+            <button class="restart">Еще раз</button>
+        </div>
+
+    </main>
+
+    <script src="/script.js"></script>
+</body>
+</html>
